@@ -1,1 +1,1 @@
-{"url":"https://sigmaapi.phoenixtechsa.com/api/pacientes?offset=1","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZXMiOlsiQWRtaW4iXSwiaWF0IjoxNzA1MzM2ODk5LCJleHAiOjE3MDU5NDE2OTl9.G_TSp6TqKl2ZXr1kixbU4NATSxjA5f27wSF55campw4","peticionesNumber":1,"tiempoTotal":656}
+{"url":"https://sigmaapi.phoenixtechsa.com/api/pacientes?offset=1","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZXMiOlsiQWRtaW4iXSwiaWF0IjoxNzA1MzM2ODk5LCJleHAiOjE3MDU5NDE2OTl9.G_TSp6TqKl2ZXr1kixbU4NATSxjA5f27wSF55campw4","peticionesNumber":100,"simultaneity":10,"tiempoTotal":28216}

@@ -50,22 +50,15 @@ async function hacerPeticionGet(url, token,cantidadPeticiones=1) {
 // Función para manejar las respuestas
 async function manejarRespuestas(respuestas) {
   try {
-    if(respuestas.simultaneity==1){
-      console.log(`Realizando ${respuestas.peticionesNumber} peticiones GET a ${respuestas.url}`);
-    }else{
-      console.log(`Realizando ${respuestas.peticionesNumber} peticiones GET a ${respuestas.url}, con una concurrencia de ${respuestas.simultaneity}`);
-    }
-    
+    console.log(`Realizando ${respuestas.peticionesNumber} peticiones GET a ${respuestas.url}`);
     if(defaultData.tiempoTotal && respuestas.url==defaultData.url){
       console.log(`Tiempo total del anterior Test: ${defaultData.tiempoTotal}`);
     }
-    if(respuestas.simultaneity){
-      respuestas.peticionesNumber=respuestas.peticionesNumber/respuestas.simultaneity
-    }
     const startTime = new Date().getTime();
+
     for (let i = 0; i < respuestas.peticionesNumber; i++) {
       const startTimeBucle = new Date().getTime();
-      const resultado = await hacerPeticionGet(respuestas.url, respuestas.token,respuestas.simultaneity);
+      const resultado = await hacerPeticionGet(respuestas.url, respuestas.token);
       const endTimeBucle = new Date().getTime();
       const tiempoTotalBucle = endTimeBucle - startTimeBucle;
       console.log(`Peticion ${i + 1}: ${tiempoTotalBucle} ms`);
@@ -113,13 +106,6 @@ async function iniciarPrograma() {
       name: 'peticionesNumber',
       message: 'Indique el número de peticiones para el test',
       choices: [1, 5, 10, 100, 1000, 10000],
-      //default: defaultData.peticionesNumber
-    },
-    {
-      type: 'list',
-      name: 'simultaneity',
-      message: 'Indique el número de concurrencias en las peticiones',
-      choices: [1,2,3,4,5,6,7,8,9,10],
       //default: defaultData.peticionesNumber
     },
   ];

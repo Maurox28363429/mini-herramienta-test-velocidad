@@ -50,12 +50,7 @@ async function hacerPeticionGet(url, token,cantidadPeticiones=1) {
 // Función para manejar las respuestas
 async function manejarRespuestas(respuestas) {
   try {
-    if(respuestas.simultaneity==1){
-      console.log(`Realizando ${respuestas.peticionesNumber} peticiones GET a ${respuestas.url}`);
-    }else{
-      console.log(`Realizando ${respuestas.peticionesNumber} peticiones GET a ${respuestas.url}, con una concurrencia de ${respuestas.simultaneity}`);
-    }
-    
+    console.log(`Realizando ${respuestas.peticionesNumber} peticiones GET a ${respuestas.url}`);
     if(defaultData.tiempoTotal && respuestas.url==defaultData.url){
       console.log(`Tiempo total del anterior Test: ${defaultData.tiempoTotal}`);
     }

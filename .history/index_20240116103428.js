@@ -105,7 +105,7 @@ async function iniciarPrograma() {
       name: 'peticionesNumber',
       message: 'Indique el número de peticiones para el test',
       choices: [1, 5, 10, 100, 1000, 10000],
-      //default: defaultData.peticionesNumber
+      default: defaultData.peticionesNumber
     },
   ];
 

@@ -50,7 +50,7 @@ async function hacerPeticionGet(url, token) {
 async function manejarRespuestas(respuestas) {
   try {
     console.log(`Realizando ${respuestas.peticionesNumber} peticiones GET a ${respuestas.url}`);
-    if(defaultData.tiempoTotal && respuestas.url==defaultData.url){
+    if(defaultData.tiempoTotal){
       console.log(`Tiempo total del anterior Test: ${defaultData.tiempoTotal}`);
     }
     const startTime = new Date().getTime();
@@ -66,7 +66,7 @@ async function manejarRespuestas(respuestas) {
     const endTime = new Date().getTime();
     const tiempoTotal = endTime - startTime;
     console.log(`Tiempo total de ejecución: ${tiempoTotal} ms`);
-    if(defaultData.tiempoTotal && respuestas.url==defaultData.url){
+    if(defaultData.tiempoTotal){
       console.log(`Comparacion de tiempos: ${defaultData.tiempoTotal-tiempoTotal}`);
     }
     respuestas.tiempoTotal=tiempoTotal;
@@ -105,7 +105,7 @@ async function iniciarPrograma() {
       name: 'peticionesNumber',
       message: 'Indique el número de peticiones para el test',
       choices: [1, 5, 10, 100, 1000, 10000],
-      //default: defaultData.peticionesNumber
+      default: defaultData.peticionesNumber
     },
   ];
 

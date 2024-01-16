@@ -1,0 +1,38 @@
+# Dependencias
+/node_modules
+
+# Archivos generados por herramientas de construcción
+/build
+/dist
+
+# Archivos de registro
+/logs
+*.log
+
+# Archivos de configuración locales
+.env
+
+# Archivos de respaldo
+*.bak
+*.swp
+
+# Archivos personales
+.DS_Store
+
+# Archivos de caché
+/.cache
+
+# Archivos de compilación
+*.o
+*.pyc
+*.class
+
+# Archivos de entorno
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Directorios específicos de IDE
+.vscode
+.idea
